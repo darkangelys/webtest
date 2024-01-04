@@ -1,0 +1,411 @@
+/* 🪧 RESET CSS*/
+/* initialisation des styles */
+
+/* git 
+ ? MENU
+ * I. html
+ * II. body
+ * III. police de caractère du contenu
+ * IIII. titles : h1, h2, h3, h4, h5, h6
+ * V. polices alternatives
+ * * 1. bases
+ * * 2. reset soft
+ * * 3. margins sur les premiers contents elements
+ * * 4. margin sur les autres contents elements
+ * * 5. HTML tags
+ * * 6. max values
+ * * 7. font wrap
+ * * 8. images
+ * * 9. scripts
+ * * 10. skip-links
+ * * 11. met en évidence les abréviations (ayant un attribut title)
+ * * 12. supprime les guillemets automatiques (citations courtes)
+ * * 13. rapproche les paragraphes dans les listes et citations
+ * * 14. styles de base pour les listes de définition
+ * * 15. mise en forme simple pour les tableaux
+ * * 16. conteneurs sémantiques de HTML5
+ * VI. classes de base
+ * * 1. display
+ * * 2. positionnement
+ * * 3. largeur et hauteur
+ * * 4. alignement du texte
+ * * 5. alignement du contenu
+ * * 6. margins et paddings
+ * VII. responsive
+*/
+
+
+/** html */
+html {font-size:10px; margin:0; padding:0;}
+
+
+/** body */
+body {
+    background-color: #fff;
+	color: #000;
+	font-family: consolas;
+	font-size: 13px;
+	word-wrap: break-word;
+	-webkit-word-wrap: break-word;
+	-moz-word-wrap: break-word;
+	-ms-word-wrap: break-word;
+	-o-word-wrap: break-word;
+	line-height: 1.3;
+}
+body *::first-letter{text-transform:capitalize;}
+
+/** police de caractère du contenu */
+p,
+ul,
+ol,
+dl,
+blockquote,
+pre,
+td,
+th,
+label,
+textarea,
+caption,
+details, 
+figure, 
+hgroup {
+	font-size: 13px;
+	line-height: 1.3;
+	margin: 10px 0 0;
+}
+
+/** titles : h1, h2, h3, h4, h5, h6 */
+h1, .h1-like {
+	font-size: 28px;
+	font-weight: normal;
+	line-height: 2.8;
+	margin: 18px 0 0 0;
+}
+h2, .h2-like {
+	font-size: 26px;
+	font-weight: normal;
+	line-height: 2.6;
+	margin: 16px 0 0 0;
+}
+h3, .h3-like {
+	font-size: 24px;
+	font-weight: normal;
+	line-height: 2.4;
+	margin: 14px 0 0 0;
+}
+h4, .h4-like {
+	font-size: 22px;
+	font-weight: normal;
+	line-height: 2.2;
+	margin:  13px 0 0 0;
+}
+h5, .h5-like {
+	font-size: 20px;
+	font-weight: normal;
+	line-height: 2;
+	margin:  13px 0 0 0;
+}
+h6, .h6-like {
+	font-size: 18px;
+	font-weight: normal;
+	line-height: 1.8;
+	margin:  13px 0 0 0;
+}
+
+/** polices alternatives */
+/* bases */
+.smaller {
+	font-size: 11px;
+	line-height: 1.3;
+}
+.small {
+	font-size: 13px;
+	line-height: 1.3;
+}
+.big {
+	font-size: 17px;
+	line-height: 1.7;
+}
+.bigger {
+	font-size: 19px;
+	line-height: 1.9;
+}
+.biggest {
+	font-size: 23px;
+	line-height: 2.3;
+}
+
+/* reset soft */
+html,
+body,
+textarea,
+figure,
+label {
+	margin: 0;
+	padding: 0;
+}
+ul,
+ol {padding-left:13px;}
+code, 
+pre,
+samp {
+	white-space: pre-wrap;
+	font-family: consolas;
+}
+code {line-height: 13px;}
+table {margin-bottom: 13px;}
+
+/* margins sur les premiers contents elements */
+p:first-child,
+ul:first-child,
+ol:first-child,
+dl:first-child,
+blockquote:first-child,
+pre:first-child,
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child {margin-top:0;}
+
+/* margins sur les autres contents elements */
+li p,
+li ul,
+li ol {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+/* HTML5 tags */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {display:block;}
+
+/* max values */
+img,
+table,
+td,
+blockquote,
+code,
+pre,
+textarea,
+input,
+video {max-width:100%;}
+
+/* font wrap */
+div,
+textarea,
+table,
+td,
+th,
+code,
+pre,
+samp {
+	word-wrap: break-word;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	-ms-hyphens: auto;
+	-o-hyphens: auto;
+	hyphens: auto;
+}
+
+/* images */
+img {
+	width: auto;
+	height: auto;
+	vertical-align: middle;
+}
+a img {border:0;}
+
+/* scripts */
+body > script {display:none !important;}
+
+/* skip-links */
+.skip-links {position:absolute;}
+.skip-links a {
+	position: absolute;
+	left: -9999px;
+	padding: 7px;
+	background: #000;
+	color: #fff;
+	text-decoration: none;
+}
+.skip-links a:focus {position:static;}
+
+/* met en évidence les abréviations (ayant un attribut title) */
+abbr[title] {
+    border-bottom: 1px dotted;
+    cursor: help;
+}
+  
+/* met en évidence les citations */
+blockquote {
+    margin: 13px 13px 23px;
+    padding: 0 0 0 13px;
+    border-left: solid 3px #ddd;
+}
+q,
+cite {font-style:italic;}
+q cite,
+q q {font-style:normal;}
+
+/* supprime les guillemets automatiques (citations courtes) */
+q {quotes:none;}
+q:before, q:after { content: ""; /* Nécessaire pour Safari/Chrome */ }
+
+/* rapproche les paragraphes dans les listes et citations */
+blockquote p,
+li p {margin:7px 0;}
+
+/* styles de base pour les listes de définition */
+dl {margin:7px 0;}
+dt {
+    margin: 7px 0 0;
+    font-weight: bold;
+}
+dd {margin:3px 3px 29px;}
+
+/* mise en forme simple pour les tableaux */
+table {
+    margin: 0;
+    border: 1px solid gray; /* Pas de bordure = "none". */
+    border-collapse: collapse; /* Valeur par défaut: "separate". */
+    border-spacing: 0;
+}
+table td,
+table th {
+    padding: 3px; /* Pas de retrait autour du texte = "0". */
+    border: 1px solid #ccc; /* Pas de bordure = "none". */
+    vertical-align: top; /* Valeur par défaut: "middle" */
+}
+
+/* conteneurs sémantiques de HTML5 */
+article,
+aside,
+dialog,
+figure,
+footer, header,
+hgroup,
+menu,
+nav,
+section {display:block;}
+
+/** classes de base */
+/* ! display */
+.clear {clear:both;}
+.block {display:block;}
+.compact {display:compact;}
+.inherit {display:inherit;}
+.inline {display:inline;}
+.inlineBlock {display:inline-block;}
+.inlineTable {display:inline-table;}
+.listItem {display:list-item;}
+.marker {display:marker;}
+.none {display:none;}
+.runIn {display:run-in;}
+.table {display:table;}
+.tableCaption {display:table-caption;}
+.tableCell {display:table-cell;}
+.tableColumn {display:table-column;}
+.tableColumnGroup {display:table-column-group;}
+.tableFooterGroup {display:table-footer-group;}
+.tableHeaderGroup {display:table-header-group;}
+.tableRow {display:table-row;}
+.tableRowGroup {display:table-row-group;}
+.flex {display:flex;}
+
+/*! grilles */
+.grid {display:grid;}
+.grid100 {display:grid;grid-template-columns: 100%;}
+.grid50 {display:grid;grid-template-columns: 50% 50%;}
+.grid33 {display:grid;grid-template-columns: 33% 33% 33%;}
+.grid25 {display:grid;grid-template-columns: 25% 25% 25% 25%;}
+.grid20 {display:grid;grid-template-columns: 20% 20% 20% 20% 20%;}
+.grid16 {display:grid;grid-template-columns: 16% 16% 16% 16% 16% 16% 16% 16% 16% 16% 16% 16% 16% 16% 16% 16%;}
+.grid14 {display:grid;grid-template-columns: 14% 14% 14% 14% 14% 14% 14% 14% 14% 14% 14% 14% 14% 14% 14% 14%;}
+.grid12 {display:grid;grid-template-columns: 12% 12% 12% 12% 12% 12% 12% 12% 12% 12% 12% 12%;}
+.grid10 {display:grid;grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10}
+
+/* ! positionnement */
+.absolute {position:absolute;}
+.relative {position:relative;}
+.fixed {position:fixed;}
+.left {float:left;}
+.right {float:right;}
+.top {float:top;}
+.bottom {float:bottom}
+
+/* ! largeur et hauteur */
+.width0 {width:0;}
+.width25 {width:25%;}
+.width50 {width:50%;}
+.width75 {width:75%;}
+.width {width:100%;}
+.height {min-height:1000px;}
+.height0 {height:0;}
+.height25 {height:25%;}
+.height50 {height:50%;}
+.height75 {height:75%;}
+.height100 {height:100%;}
+.height25vh {height:25vh;}
+.height50vh {height:50vh;}
+.height75vh {height:75vh;}
+.height100vh {height:100vh;}
+
+/* ! alignement du texte */
+.txtleft {text-align:left;}
+.txtcenter {text-align:center;}
+.txtright {text-align:right;}
+
+/* ! alignement du contenu */
+.center {margin:0 auto;}
+
+/* ! margins et paddings */
+.margin0 {margin:0;}
+.margin5 {margin:5px;}
+.margin10 {margin:10px;}
+.margin15 {margin:15px;}
+.margin20 {margin:20px;}
+.margin25 {margin:25px;}
+.padding0 {padding:0;}
+.padding5 {padding:5px;}
+.padding10 {padding:10px;}
+.padding15 {padding:15px;}
+.padding20 {padding:20px;}
+.padding25 {padding:25px;}
+
+/** responsive */
+@media screen and (max-width: 1299px){} /** 1200x700 */
+@media screen and (max-width: 1199px){} /** 1100x700 */
+@media screen and (max-width: 1099px){} /** 1000x700 */
+@media screen and (max-width: 999px){} /** 900x700 */
+@media screen and (max-width: 899px){} /** 800x700 */
+@media screen and (max-width: 799px){} /** 700x700 */
+@media screen and (max-width: 699px){} /** 600x700 */
+@media screen and (max-width: 599px){} /** 500x700 */
+@media screen and (max-width: 499px){} /** 400x700 */
+@media screen and (max-width: 399px){} /** 300x700 */
+
+@media screen and (max-height: 1000px){} /** 1200x1000 */
+@media screen and (max-height: 950px){} /** 1200x950 */
+@media screen and (max-height: 900px){} /** 1200x900 */
+@media screen and (max-height: 850px){} /** 1200x850 */
+@media screen and (max-height: 800px){} /** 1200x800 */
+@media screen and (max-height: 750px){} /** 1200x750 */
+@media screen and (max-height: 700px){} /** 1200x700 */
+@media screen and (max-height: 650px){} /** 1200x650 */
+@media screen and (max-height: 600px){} /** 1200x600 */
+@media screen and (max-height: 550px){} /** 1200x550 */
+@media screen and (max-height: 500px){} /** 1200x500 */
+@media screen and (max-height: 450px){} /** 1200x450 */
+@media screen and (max-height: 400px){} /** 1200x400 */
+@media screen and (max-height: 350px){} /** 1200x350 */
+@media screen and (max-height: 300px){} /** 1200x300 */

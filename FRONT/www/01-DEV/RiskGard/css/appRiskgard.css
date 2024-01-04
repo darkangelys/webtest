@@ -1,0 +1,756 @@
+/* 🪧 APP RISKGARD */
+
+/*
+ ? Menu
+ * 0. proprietés supplémentaires
+
+ * I. app
+ * II. navigation
+ * * 1. menu
+ * * 2. liens
+ * * 3. titre lien
+ * III. section
+ * IV. recherche
+ * V. documentation
+ * VI. détecteur
+ * VII. imagerie ecg
+ * VIII. infos
+ * IX. administration
+ 
+ * 100. barre de défillement
+*/
+
+/*! proprietés supplémentaires */
+.AppRisKgard .NavSocialRiskgard,
+.AppRisKgard .LogoRiskgard {display:grid;}
+
+.lien4RiskgardAccueil,
+.lien5RiskgardAccueil,
+.NavLien4Riskgard,
+.NavLien5Riskgard {display:none!important;}
+
+.NavContentRiskgard {grid-template-columns: 155px 200px!important;}
+
+/** app */
+.AppRisKgard {
+    display: grid;
+    grid-template-columns: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    background: url("/www/00-images/riskgard/fonds/paper.png") repeat;
+    background-size: 800px 100vh;
+    background-position: bottom;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+}
+
+.AppRisKgardContent {
+    display: grid;
+    grid-template-columns: 100%;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+.AppRisKgardContent::after{
+    content: "";
+    display: grid;
+    position: absolute;
+    bottom: 0;
+    grid-template-columns: 100%;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    background: url("/www/00-images/riskgard/fonds/light.png") no-repeat;
+    background-size: initial;
+    background-position: bottom;
+    width: 100%;
+    height: 100px;
+    opacity: 1;
+
+    animation:  FondRisKgardContent 10s linear infinite;
+}
+@keyframes FondRisKgardContent {
+    0% {opacity:.75;}
+    50% {opacity:.75;}
+    51% {opacity:.5;}
+    52% {opacity:.75;}
+    100% {opacity:1;}
+}
+
+.ContentRiskgard {
+    display: grid;
+    position: relative;
+    grid-template-columns: 100%;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    background: #00000050;
+    border: #00bbdd25 1px solid;
+    width: 90%;
+    height: 70vh;
+
+    animation: ContentRiskgard 1s linear;
+}
+@keyframes ContentRiskgard {
+    0% {height:0;}
+    100% {height:70vh;}
+}
+
+/** navigation */
+/* menu */
+.NavContentRiskgard {
+    grid-template-columns: 255px 200px;
+    width:100%;
+    height:70vh;
+    opacity: 1;
+}
+.NavContentRiskgardAnimation {
+    animation: NavContentRiskgard .25s linear;
+}
+@keyframes NavContentRiskgard {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+.NavRiskgard {
+    display: block;
+    position: relative;
+    grid-template-columns: 100%;
+    width: 255px;
+    height: 50px;
+}
+
+/* liens */
+.NavLienRiskgard {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+}
+.NavLienRiskgard:hover {background:#ffffff10;}
+.NavLienRiskgard .hover {display:none;}
+.NavLienRiskgard:hover .hover{display:block;}
+.NavLienRiskgard:hover .normal{display:none;}
+
+.NavLienRiskgard a {
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    top: 0;
+    background: #ffffff10;
+    border: #ffffff25 1px solid;
+    width: 25px;
+    height: 25px;
+    padding: 12px;
+}
+.NavLienRiskgard:active {background:#00bbdd50;}
+
+/* titre lien */
+.NavTitleRiskgard {
+    display: block;
+    position: relative;
+    width:100%;
+    height:50px;
+    margin : 0 10px;
+}
+.NavContentRiskgard p {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    font-family: teko;
+    font-size: 37px;
+    height: 37px;
+}
+
+/** sections */
+.RiskgardContent {
+    z-index: 30;
+    display: grid;
+    position: absolute;
+    grid-template-columns: 100%;
+    align-items: start;
+    align-content: normal;
+    justify-items: center;
+    justify-content: center;
+    text-align: center;
+    top: 80px;
+    color: #ffffff95;
+    width: calc(100% - 2px);
+    height: calc(70vh - 80px);
+    overflow: auto;
+}
+
+/** recherche */
+.RechercheRiskgard {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 30px;
+    background: #ffffff22;
+    border-top: #ffffff25 1px solid;
+    margin: 0 0 10px;
+}
+
+.RechercheRiskgard input {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #ffffff25;
+    border: none;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+}
+.RechercheRiskgard input::placeholder {color:#ffffff90;}
+.RechercheRiskgard input:focus {outline:none;}
+
+/** documentation */
+.DocumentationRiskgardContent {
+    display: grid;
+    position: relative;
+    grid-template-columns: 16% 16% 16% 16% 16% 16%;
+}
+@media screen and (max-width: 2599px){
+    .DocumentationRiskgardContent {grid-template-columns: 20% 20% 20% 20% 20%;}}
+@media screen and (max-width: 2099px){
+    .DocumentationRiskgardContent {grid-template-columns: 25% 25% 25% 25%;}}
+@media screen and (max-width: 1599px){
+    .DocumentationRiskgardContent {grid-template-columns: 33% 33% 33%;}}
+@media screen and (max-width: 1099px){
+    .DocumentationRiskgardContent {grid-template-columns: 50% 50%;}}
+@media screen and (max-width: 599px){
+    .DocumentationRiskgardContent {grid-template-columns:100%;}}
+
+.DocRiskgard {
+    display: inline-block;
+    position: relative;
+    background: #2299ff15;
+    border: #2299ff90 1px solid;
+    text-align: left;
+    hyphens: none;
+    margin: 10px;
+    padding: 10px 20px;
+    vertical-align: top;
+}
+.DocRiskgard:hover {border: #0bd 1px solid;}
+
+.DocRiskgard .texteCle {
+    color: #ffff00;
+    font-size: 37px;
+    font-weight: bold;
+    margin: 0 0 30px;
+    width:100%;
+}
+
+.DocRiskgard .puce {
+    display: block;
+    position: absolute;
+    color: #0bd;
+    top: -10px;
+    left: 5px;
+}
+
+.DocRiskgard .lien {
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    color: #0bd;
+    font-size: 53px;
+    line-height: 0;
+    bottom: 23px;
+    right: 0;
+    bottom: 19px;
+    right: -3px;
+}
+.DocRiskgard .lien:hover {
+    color: #fff;
+}
+
+.DocRiskgard h1 {
+    color: #fff;
+    font-weight: bold;
+    line-height: 31px;
+    margin: 30px 0;
+}
+
+.DocRiskgard p {font-size:15px;}
+
+.DocRiskgard img {
+    width: 80px;
+    height: 80px;
+    padding: 10px;
+}
+
+/** detecteur */
+
+/** imagerie ecg */
+.ImagerieECGRiskgard {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+}
+
+.ImagerieECGFormRiskgardContent {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width:calc(100% - 100px);
+    height: calc(70vh - 80px);
+    margin: auto;
+    padding: 0 50px;
+}
+
+.ImagerieECGListRiskgard {
+    display: grid;
+    grid-template-columns: 100%;
+    width:100%;
+    height: 100%;
+    margin: auto;
+}
+
+.ImagerieRiskgardDepotGlisser {
+    display: grid;
+    position: relative;
+    grid-template-columns: 100%;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    background: #2299ff50;
+    border: #2299ff90 1px solid;
+    width: calc(100% - 22px);
+    height: calc(100% - 80px);
+    margin: auto;
+    padding: 10px;
+}
+
+.ImagerieRiskgardDepot img {
+    min-width: 300px;
+    min-height: 300px;
+    max-width: 80%;
+    max-height: 40vh;
+}
+
+.ImagerieRiskgardDepot img,
+.ImagerieRiskgardDepot p {z-index:1;}
+
+.ImagerieRiskgardUpload {
+    display: grid;
+    position: relative;
+    grid-template-columns: 100%;
+    align-items: center;
+    align-content: start;
+    justify-items: start;
+    justify-content: center;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    margin: auto;
+    padding: 10px;
+}
+
+.ImagerieECGFormRiskgard{
+    display: grid;
+    position: relative;
+    grid-template-columns: 100%;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    width: calc(100% - 2px);
+    height: calc(70vh - 80px);
+}
+
+/* formulaire imagerie ecg */
+.ImagerieRiskgardForm {
+    display: grid;
+    grid-template-columns: 100%;
+    align-items: center;
+    align-content: start;
+    justify-items: start;
+    justify-items: stretch;
+    text-align: left;
+    width: 100%;
+    max-width: 400px;
+    max-height: 400px;
+    margin: auto;
+}
+
+.ImagerieRiskgardForm p,
+.ImagerieRiskgardForm .inputBlock,
+.ImagerieRiskgardForm .inputBlockImg {
+    display: block;
+    position: relative;
+    background: #fff;
+    border: none;
+    border-bottom: #f90 5px solid;
+    color: #000;
+    font-weight: bold;
+    text-align: left;
+    margin: 0 0 10px;
+    height: 20px;
+    padding: 5px 5px 0 5px;
+    cursor: no-drop;
+}
+
+.ImagerieRiskgardForm .inputBlockImg {
+    border-color:#2299ff;
+    cursor: no-drop;}
+
+.ImagerieRiskgardForm input,
+.ImagerieRiskgardForm select {
+    display: block;
+    position: relative;
+    background: #fff;
+    border: #fff 5px solid;
+    color: #000;
+    margin: 0 0 10px;
+    height: 25px;
+}
+
+.ImagerieRiskgardForm input[type="date"]{
+    height: 25px;
+}
+
+.ImagerieRiskgardForm select {
+    height: 35px;
+}
+
+.ImagerieECGFormRiskgardContent input[type="file"]{
+    cursor: pointer;
+    border: none;
+    background: #2299ff50;  
+    border: 1px solid #2299ff90;  
+    color: #00000090;
+    height: 35px;
+    width: calc(100% - 2px);
+    margin: 5px 0;
+}
+
+.ImagerieECGFormRiskgardContent input[type="file"]::-webkit-file-upload-button {
+    border: none;
+    background: #ffffff50;
+    color: #ffffff;
+    font-weight: bold;
+    height: 100%;
+}
+.ImagerieECGFormRiskgardContent input[type="file"]:hover::-webkit-file-upload-button {
+    cursor: pointer;
+    background: #2299ff;
+}
+
+.ImagerieECGFormRiskgardContent input[type="file" i],
+.ImagerieECGFormRiskgardContent input[type="text" i]{
+    color: #ffffff90;
+    writing-mode: horizontal-tb !important;
+    padding-block: 0;
+    padding-inline: 0;
+}
+
+.ImagerieECGFormRiskgard .option{
+    background: #ffffff95;
+    border-radius: 0;
+    width: 400px;
+    height: 15px;
+}
+
+.ImagerieRiskgardForm button {
+    background: #2299ff;
+    color: #fff;
+    border: #2299ff 1px solid;
+    height: 35px;
+    margin: 15px 0 0;
+}
+
+.ImagerieRiskgardForm .detecteur{
+    display: grid;
+    grid-template-columns: 100%;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    color: #fff;
+    background: #ffffff75;
+    border: #ffffff50 1px solid;
+    height: 35px;
+    margin: 15px 0 0;
+}
+.ImagerieRiskgardForm .detecteur:hover{
+    cursor: pointer;
+    background: #fff;
+    border: #fff 1px solid;
+    color: #000;
+}
+
+.ImagerieRiskgardForm button:hover {
+    cursor: pointer;
+    color: #000;
+    border: #000 1px solid;
+}
+
+/* liste imagerie ecg */
+.ImagerieECGListRiskgardContent{width: 100%;}
+
+/* no data */
+.NoDataTableRiskGard {
+    display: grid;
+    grid-template-columns: 100%;
+    align-items: start;
+    align-content: start;
+    justify-items: center;
+    justify-content: normal;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    max-width: 400px;
+    max-height: 400px;
+    margin: 0 auto 30px;
+}
+
+.NoDataTableRiskGard p {
+    font-size: 17px;
+    text-align: start;
+    word-wrap: unset;
+    width: 100%;
+    margin: 0 0 10px;
+}
+
+.NoDataTableRiskGard button {
+    background: #29f;
+    border: #29f 1px solid;
+    color: #fff;
+    font-weight: bold;
+    width: 100%;
+    height: 35px;
+}
+
+.NoDataTableRiskGard button:hover {
+    cursor: pointer;
+    background: #29f;
+    color: #000;
+    border: #000 1px solid;
+}
+
+/** infos */
+/** administration */
+.AdminAjoutMedecinRiskgard,
+.AdminAjoutMedecinRiskgardContent,
+.AdminAjoutPatientRiskgard,
+.AdminAjoutPatientRiskgardContent,
+.AdminAjoutDossierPatientsRiskgard,
+.AdminAjoutDossierPatientsRiskgardContent {
+    z-index: 40;
+    display: grid;
+    position: absolute;
+    grid-template-columns: 100%;
+    align-items: center;
+    align-content: start;
+    justify-items: start;
+    justify-content: center;
+    top: 0;
+    grid-template-columns: 100%;
+    background: #000;
+    width: 100%;
+    height: 100%;
+}
+
+.AdminAjoutMedecinRiskgard .fermer,
+.AdminAjoutPatientRiskgard .fermer,
+.AdminAjoutDossierPatientsRiskgard .fermer {
+    z-index: 41;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.AdminAjoutMedecinRiskgard h1,
+.AdminAjoutPatientRiskgard h1,
+.AdminAjoutDossierPatientsRiskgard h1 {
+    position: relative;
+    color: #fff; 
+    top: 0;
+    width: 100%;
+    line-height: 0;
+}
+
+.AdminAjoutMedecinRiskgard .ImagerieRiskgardForm,
+.AdminAjoutPatientRiskgard .ImagerieRiskgardForm,
+.AdminAjoutDossierPatientsRiskgard .ImagerieRiskgardForm {
+    width: 90%;
+    margin: 50px auto 0;
+}
+
+/** detecteur */
+.DetecteurForm{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    width: 100%;
+    height: calc(70vh - 100px);
+}
+
+.DetecteurForm .ImagerieRiskgardInfos{
+    display: grid;
+    grid-template-columns: 100%;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    position: relative;
+    background: #2299ff50;
+    border: #2299ff90 1px solid;
+    border-radius: 15px;
+    width: 90%;
+    height: calc(70vh - 140px);
+    margin: 20px 0;
+    padding: 0 5%;
+}.DetecteurForm .red{
+    background: #ff000025;
+    border: #ff000090 1px solid;
+}
+
+.DetecteurFormulaireRiskgard .ImagerieRiskgardInfos label,
+.DetecteurFormulaireRiskgard .ImagerieRiskgardInfos div{
+    text-align: left;
+    width: 100%;
+}
+
+.DetecteurFormulaireRiskgard .ImagerieRiskgardInfos div{
+    display: grid;
+    grid-template-columns: 100%;
+    margin: 5px 0;
+    padding: 10px 0;
+}
+
+.DetecteurFormulaireRiskgard .ImagerieRiskgardInfos input{
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 17px;
+    font-weight: bold;
+    margin: 0 0 5px -2px;
+}
+
+.DetecteurFormulaireRiskgard .ImagerieRiskgardInfos .resultat{
+    background: #2299ff25;
+    border: 2px solid #2299ff90;
+    border-radius: 5px;
+}
+.DetecteurFormulaireRiskgard .red{
+    background: #ff000050;
+    border-radius: 5px;
+    color: #f00;
+    font-weight: bold;
+}
+
+.DetecteurFormulaireRiskgard .ImagerieRiskgardInfos .resultat{
+    width: calc(100% - 25px);
+    padding: 5px 15px;
+}.DetecteurFormulaireRiskgard .ImagerieRiskgardInfos .resultat p{
+    color: #fff;
+    font-size: 19px;
+    font-weight: bolder;
+}.DetecteurFormulaireRiskgard .ImagerieRiskgardInfos .resultat p{
+    color: #ff0;
+}
+
+.DetecteurForm .ImagerieRiskgardForm{
+    display: grid;
+    width: 80%;
+    height: calc(70vh - 140px);
+    max-height: 100%;
+    padding: 0 10%;
+    overflow: auto;
+}
+
+.DetecteurFormulaireRiskgard .DetecteurFormulaireRiskgardContent{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    margin: 0 10px;
+    height: calc(70vh - 100px);
+}
+
+.DetecteurFormulaireRiskgard .AnimationDetecteur{
+    display: grid;
+    position: relative;
+    grid-template-columns: 100%;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    background: url('/www/00-images/riskgard/fonds/man1.png') no-repeat;
+    background-size: contain;
+    background-position: center;
+    border: #2299ff90 1px solid;
+    border-radius: 15px;
+    width: 90%;
+    height: calc(70vh - 140px);
+    margin: auto;
+
+    animation: coeurFrom 3s infinite;
+}.DetecteurFormulaireRiskgard .red{
+    background: url('/www/00-images/riskgard/fonds/man-red.png') no-repeat;
+    background-size: contain;
+    background-position: center;
+    border: #ff0000 1px solid;
+}
+@keyframes coeurFrom {
+    0% {
+        background: url('/www/00-images/riskgard/fonds/man1.png') no-repeat;
+        background-position: center;
+        background-size: contain;}
+    20% {
+        background: url('/www/00-images/riskgard/fonds/man2.png') no-repeat;
+        background-position: center;
+        background-size: contain;}
+    25% {
+        background: url('/www/00-images/riskgard/fonds/man1.png') no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+    45% {
+        background: url('/www/00-images/riskgard/fonds/man2.png') no-repeat;
+        background-position: center;
+        background-size: contain;}
+    50% {
+        background: url('/www/00-images/riskgard/fonds/man1.png') no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+    70% {
+        background: url('/www/00-images/riskgard/fonds/man2.png') no-repeat;
+        background-position: center;
+        background-size: contain;}
+    75% {
+        background: url('/www/00-images/riskgard/fonds/man1.png') no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+    95% {
+        background: url('/www/00-images/riskgard/fonds/man2.png') no-repeat;
+        background-position: center;
+        background-size: contain;}
+    100% {
+        background: url('/www/00-images/riskgard/fonds/man1.png') no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+}
+
+/*! barre de défillement */
+::-webkit-scrollbar {background:none;}
+::-webkit-scrollbar-thumb {border-right:#29f 2px solid;}

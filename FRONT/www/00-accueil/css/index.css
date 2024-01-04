@@ -1,0 +1,17 @@
+/* 🪧 INDEX CSS */
+
+/*
+ ? Menu
+ * I. html
+*/
+
+/** html */
+html {
+    display: grid;
+    grid-template-columns: 100%;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    overflow: hidden;
+}

@@ -1,0 +1,421 @@
+/* 🪧 ACCUEIL RISKGARD */
+
+/*
+ ? Menu
+ * I. accueil riskgard
+ * II. annimation
+ * * 1. ecg
+ * * 2. coeur
+ * * 3. croix
+ * * 4. desactivation animation
+ * III. logo riskgard
+ * IV. description
+ * V. navigation social
+ * VI. navigation accueil riskgard
+ * * 1. croix
+ * * 2. liens
+*/
+
+/*! proprietés supplémentaires */
+.AccueilRisKgard .NavSocialRiskgard,
+.AccueilRisKgard .LogoRiskgard {display:none;}
+
+/** acceuil riskgard */
+.AccueilRisKgard {
+    display: grid;
+    grid-template-columns: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    background: url("/www/00-images/riskgard/fonds/paper.png") repeat;
+    background-size: 800px 100vh;
+    background-position: bottom;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+}
+
+.AccueilRisKgardContent {
+    display: grid;
+    grid-template-columns: 100%;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    background: #00000075;
+    width: 100%;
+    height: 100vh;
+}
+
+.AccueilAnimationRiskgard {
+    display: grid;
+    position: relative;
+    grid-template-columns: 100%;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 100vh;
+}
+
+/** annimation */
+/* coeur */
+.CoeurRiskgard {
+    z-index: 10;
+    display: grid;
+    grid-template-columns: 100%;
+    position: absolute;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.CoeurRiskgardDesactivate {
+    animation: CoeurRiskgardDesactivate 1s linear;
+}
+@keyframes CoeurRiskgardDesactivate {
+    0% {opacity:1;}
+    100% {opacity:0;}
+}
+
+.CoeurAnimation{
+    z-index: 12;
+    display: grid;
+    grid-template-columns: 100%;
+    position: absolute;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    background: url("/www/00-images/riskgard/fonds/coeur.png") no-repeat;
+    background-size: cover;
+    width: 230px;
+    height: 195px;
+}
+
+.CoeurAnimationActivate {
+    transition: opacity 1s ease-in-out;
+    opacity: 1;
+}
+
+/* ecg */
+.ECGAnimation{
+    z-index: 11;
+    display: grid;
+    grid-template-columns: 100%;
+    align-items: center;
+    align-content: center; 
+    justify-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 137px;
+    overflow: hidden;
+}
+
+.ECGImg {
+    background: url("/www/00-images/riskgard/fonds/ECG.png") repeat-x;
+    background-size: 586px 137px;
+    background-position: 0;
+    width: 2344px;
+    height: 150px;
+
+    animation: ECGAnimation 20s linear infinite;
+}
+@keyframes ECGAnimation {
+    0% {background-position:100%;}
+    100% {background-position:-100%;}
+}
+
+/* croix */
+.CroixAnimation{
+    z-index: 13;
+    display: grid;
+    grid-template-columns: 100%;
+    position: absolute;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    background: url("/www/00-images/riskgard/fonds/croix.png") no-repeat;
+    background-size: cover;
+    width: 230px;
+    height: 195px;
+
+    animation: CroixAnimation 3s linear infinite;
+}
+.CroixAnimation:hover{
+    cursor: pointer;
+    background: url("/www/00-images/riskgard/fonds/coeur-brillant.png") no-repeat;
+    background-size: cover;
+    animation: none;
+}
+@keyframes CroixAnimation {
+    0% {opacity:0;}
+    25% {opacity:1;}
+    50% {opacity:0;}
+    75% {opacity:1;}
+    100% {opacity:0;}
+}
+
+/** logo riskgard */
+.LogoRiskgard {
+    z-index: 20;
+    display: grid;
+    grid-template-columns: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100px;
+}
+
+.LogoImgRiskgard {
+    display: grid;
+    grid-template-columns: 100%;
+    position: relative;
+    align-items: center;
+    align-content: center;
+    justify-items: start;
+    justify-content: center;
+    width: 90%;
+    height: 100%;
+}
+
+.LogoImgRiskgard img{
+    width: 60px;
+    height: 60px; 
+    margin-right: 10px;
+}
+
+.LogoImgRiskgard a {
+    font-family: teko;
+    font-size: 37px;
+    color: #fff;
+    text-decoration: none;
+}
+
+/** description */
+.LogoDescRiskgard {
+    display:block;
+    position: absolute;
+    color: #fff;
+    font-family: teko;
+    font-size: 23px;
+    left: 175px;
+}
+
+.logoDescStartRiskgard {
+    display: inline-block;
+    position: relative;
+    background: url("/www/00-images/home/liens/lien-active.png") no-repeat;
+    background-size: cover;
+    width:10px;
+    height:40px;
+    opacity:1;
+
+    animation: logoDescRiskgard .5s linear;
+}
+@keyframes logoDescRiskgard{
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+.logoDescMiddleRiskgard {
+    display: inline-block;
+    position: relative;
+    bottom: 13px;
+}
+
+.logoDescEndRiskgard {
+    display: inline-block;
+    position: relative;
+    background: url("/www/00-images/home/liens/lien-active.png") no-repeat;
+    background-size: cover;
+    background-position: right;
+    width:10px;
+    height:40px;
+    opacity: 1;
+
+    animation: logoDescRiskgard .5s linear;
+}
+
+/** navigation social */
+.NavSocialRiskgard {
+    z-index: 20;
+    display: grid;
+    grid-template-columns: 100%;
+    position: absolute;
+    bottom: 0;
+    align-items: center;
+    align-content: center;
+    justify-items: start;
+    justify-content: center;
+    width: 90%;
+    height: 100px;
+}
+
+.NavSocialRiskgard a {
+    width: 50px; 
+    height: 50px; 
+    margin: 0;
+    padding: 15px;
+}
+
+.NavSocialRiskgard a:hover {
+    background: url("/www/00-images/home/liens/lien-active.png") no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.NavSocialRiskgard img {width:30px; height:30px;}
+
+/** navigation accueil riskgard */
+/* croix */
+.NavAccueilRiskgard {
+    z-index: 30;
+    display: grid;
+    position: absolute;
+    grid-template-columns: 100%;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    background: none;
+    width: 200px;
+    height: 200px;
+}
+
+.NavAccueilRiskgardForme {
+    z-index: 31;
+    display: grid;
+    position: absolute;
+    top: 0;
+    left: 0;
+    grid-template-columns: 100%;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+}
+
+.NavAccueilRiskgardForme1 {
+    background: url("/www/00-images/riskgard/menu/forme1.png") no-repeat;
+    background-size: contain;
+    background-position: center;
+    animation: NavAccueilRiskgardForme 60s linear infinite;
+}
+.NavAccueilRiskgardForme2 {
+    background: url("/www/00-images/riskgard/menu/forme2.png") no-repeat;
+    background-size: contain;
+    background-position: center;
+    animation: NavAccueilRiskgardForme 60s linear infinite;
+}
+.NavAccueilRiskgardForme3 {
+    background: url("/www/00-images/riskgard/menu/forme3.png") no-repeat;
+    background-size: contain;
+    background-position: center;
+    animation: NavAccueilRiskgardForme 90s linear infinite;
+}
+@keyframes NavAccueilRiskgardForme {
+    0% {rotate:0;}
+    100% {rotate:360deg;}
+}
+
+.NavAccueilRiskgardForme4 {
+    background: url("/www/00-images/riskgard/menu/croix.png") no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+/* liens */
+.NavAccueilRiskgardLiens {
+    z-index: 32;
+    display: grid;
+    position: absolute;
+    grid-template-columns: 100%;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    width: 0;
+    height: 0;
+}
+
+.lienRiskgardAccueil {
+    display: grid;
+    position: absolute;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    background: url("/www/00-images/riskgard/menu/lienRiskgard.png") no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    animation: lienRiskgardAccueil 1s linear;
+}
+@keyframes lienRiskgardAccueil {
+    0% {opacity:0;}
+    50% {opacity:0;}
+    100% {opacity:1;}
+}
+.lienRiskgardAccueil:hover {
+    background: url("/www/00-images/riskgard/menu/lienRiskgard-active.png") no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.lienRiskgardAccueil a {cursor: pointer; width:100%; height:100%;}
+.lienRiskgardAccueil a img {width:30px; height:30px;}
+.lienRiskgardAccueil .hover {display:none;}
+.lienRiskgardAccueil:hover .hover{display:block;}
+.lienRiskgardAccueil:hover .normal{display:none;}
+
+
+.lien1RiskgardAccueil {
+    top: -200px;
+    left: -30px;
+    width: 61px;
+    height: 60px;
+    opacity: 1;
+}
+
+.lien2RiskgardAccueil {
+    top: -150px;
+    left: 90px;
+    width: 61px;
+    height: 60px;
+}
+
+.lien3RiskgardAccueil {
+    top: -30px;
+    left: 140px;
+    width: 61px;
+    height: 60px;
+}
+
+.lien4RiskgardAccueil {
+    top: 90px;
+    left: 90px;
+    width: 61px;
+    height: 60px;
+}
+
+.lien5RiskgardAccueil {
+    top: 150px;
+    left: -30px;
+    width: 61px;
+    height: 60px;
+}

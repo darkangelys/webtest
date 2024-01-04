@@ -1,0 +1,49 @@
+<!-- 🪧 INDEX HTML -->
+<!doctype html>
+<html key="html" id="html" lang="fr">
+    <head key="head" id="head">
+        <!-- *meta tags -->
+        <meta key="metaUTF8" id="metaUTF8" charset="utf-8">
+        <meta key="metaViewport" id="metaViewport" name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- *favicon -->
+        <!--
+         fav icon permet d'afficher le logo
+         pour changer le logo, il faut modifier le fichier favicon.ico ou mettre l'adresse de l'image désirée
+
+         ! lecture des adresses
+         pour mettre l'adresse de l'image désirée dans la balise <link>, il est important de savoir que les navigateurs web lisent l'adresse des fichiers CSS du site à partir de l'index.html qu'importe où on l'appelle
+         Aussi il faut noter que les fichiers JSX se lisent à partir du fichier qui l'appelle
+        -->
+        <link key="favicon" id="favicon" rel="icon" type="image/x-icon" href="./www/00-images/pixewebcrea/favicon/favicon.ico">
+
+        <!-- *styles -->
+        <!-- reset.css reinitialise les styles de base -->
+        <link key="resetCss" id="resetCss" rel="stylesheet" type="text/css" href="./www/00-accueil/css/reset.css">
+        <link key="indexCss" id="indexCss" rel="stylesheet" type="text/css" href="./www/00-accueil/css/index.css">
+
+        <!-- *fonts-->
+        <!-- google apis -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <!-- google static -->
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!-- google fuggles -->
+        <link href="https://fonts.googleapis.com/css2?family=Fuggles&display=swap" rel="stylesheet">
+        <!-- sedgwick ave display -->
+        <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
+        <!-- google teko -->
+        <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+        <!-- *titre du site -->
+        <title key="title" id="title">🔻PIXEWEBCREA🔻</title>
+    </head>
+    <body key="body" id="body" class="body">
+        <!-- *BODY -->
+        <!-- 
+         script module main.jx permet d'afficher le site
+         <div id="root"></div> étant la balise où main.jsx va etre executé
+        -->
+        <div key="root" id="root" class="root"></div>
+        <script key="moduleMain" id="moduleMain" type="module" src="./www/main.jsx"></script>
+    </body>
+</html>
